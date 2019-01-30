@@ -120,3 +120,9 @@ app_license = "MIT"
 # 	"frappe.desk.doctype.event.event.get_events": "idelta_website.event.get_events"
 # }
 
+
+website_context = {
+  'footer': 'Agiliq Info Solutions',
+  "site_config_context_variable": "This is foo.bar!"
+}
+
