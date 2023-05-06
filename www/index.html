@@ -43,7 +43,6 @@
 		</div>
 	</nav>
 	<!-- start home -->
-	{{ frappe.get_list("Customer", filters=[["Customer", "disabled", "=", 0]], limit=0, distinct=True, fields=["name"]) | length }}
 	<section id="home">
 		<div class="overlay">
 			<div class="flexslider">
@@ -69,6 +68,7 @@
 	</section>
 	<!-- end home -->
 	<!-- start service -->
+	{{ frappe.get_list("Customer", filters=[["Customer", "disabled", "=", 0]], limit=0, distinct=True, fields=["name"]) | length }}
 	<section id="service">
 		<div class="container">
 			<div class="row">
