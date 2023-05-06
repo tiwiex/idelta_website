@@ -68,13 +68,13 @@
 	</section>
 	<!-- end home -->
 	<!-- start service -->
-	Tiwiex
+	
 	{{ frappe.get_list("Customer", filters=[["Customer", "disabled", "=", 0]], limit=0, distinct=True, fields=["name"]) | length }}
 	<section id="service">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 text-center wow bounceIn">
-					<h2>Servicess</h2>
+					<h2>Services</h2>
 					<hr>
 					<h4>Internet Service Providers</h4>
 				</div>
