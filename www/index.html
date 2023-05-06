@@ -309,8 +309,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-
-					<p class="wow bounceIn">Copyright &copy; 2023 <span>Inspired Delta Technology Solutions</span> </a></p>
+					{% from datetime import datetime %}
+					<p class="wow bounceIn">Copyright &copy; {{ datetime.now().year }} <span>Inspired Delta Technology Solutions</span> </a></p>
 				</div>
 			</div>
 		</div>
