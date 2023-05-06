@@ -148,7 +148,7 @@
 					<span class="text-uppercase">Number of Clients: {{ frappe.get_list("Customer", filters=[["Customer", "disabled", "=", 0]], limit=0, distinct=True, fields=["name"]) | length }}
 					</span>
 					<div class="progress">
-						<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="{{ frappe.get_list("Customer", filters=[["Customer", "disabled", "=", 0]], limit=0, distinct=True, fields=["name"]) | length }}
+						<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="{{ frappe.get_list("Customer", filters=[["Customer", "disabled", "=", 0]], limit=0, distinct=True, fields=["name"]) | length }}"
 						" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
 					</div>
 					<span class="text-uppercase">Available Bandwidth</span>
