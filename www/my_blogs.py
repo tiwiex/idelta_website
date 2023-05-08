@@ -1,7 +1,7 @@
 import frappe
 
 def get_context(context):
-    context.test_var = "Hello World"
+    context["test_var"] = "Hello World"
     return context
 
 print("tiwie")
