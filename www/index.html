@@ -73,7 +73,7 @@
 
 	{{ frappe.get_all("Project Portfolio", fields=["name", "project_description"]) }}
 	{{ frappe.get_list("Customer", filters=[["Customer", "disabled", "=", 0]], limit=0, distinct=True, fields=["name"]) | length }}
-Taiwo
+Taiwoo
 		{% for project in project_portfolio %}
 			<div>
 				<img src="{{ project.project_image }}" alt="{{ project.title }}">
