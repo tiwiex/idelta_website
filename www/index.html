@@ -74,14 +74,12 @@
 	{{ frappe.get_all("Project Portfolio", fields=["name", "project_description"]) }}
 	{{ frappe.get_list("Customer", filters=[["Customer", "disabled", "=", 0]], limit=0, distinct=True, fields=["name"]) | length }}
 Taiwo
-	<div id="project-section">
 		{% for project in project_portfolio %}
 			<div>
 				<img src="{{ project.project_image }}" alt="{{ project.title }}">
 				<h3>{{ project.title }}</h3>
 			</div>
 		{% endfor %}
-	</div>
 	
 
 	<section id="service">
