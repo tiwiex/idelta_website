@@ -119,10 +119,24 @@ app_license = "MIT"
 # override_whitelisted_methods = {
 # 	"frappe.desk.doctype.event.event.get_events": "idelta_website.event.get_events"
 # }
+print("Hooks file executed!")
+def get_website_routes():
+    return [
+        {
+            "route": "/",
+            "name": "my_pages",
+            "page": "my_pages",
+            "render": "my_pages.my_pages",
+        }
+    ]
 
 
 website_context = {
   'footer': 'Agiliq Info Solutions',
   "site_config_context_variable": "This is foo.bar!"
 }
+
+website_routes = get_website_routes()
+
+
 

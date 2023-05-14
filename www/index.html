@@ -56,7 +56,7 @@
 								<h3 class="wow bounceIn"></h3>
 								<h1 class="wow bounce">Internet Service</h1>
 								<h2>
-									<span class="wow fadeIn" data-wow-delay="0.3s">IP PHONES,</span>
+									<span class="wow fadeIn" data-wow-delay="0.3s">IP PHONESS,</span>
 									<span class="wow fadeIn" data-wow-delay="0.6s">FIBRE,</span>
 									<span class="wow fadeIn" data-wow-delay="0.9s" style="color: goldenrod" >COLOCATION</span>
 								</h2>
@@ -70,6 +70,8 @@
 	</section>
 	<!-- end home -->
 	<!-- start service -->
+
+	{{ frappe.get_all("Project Portfolio", fields=["name", "project_description"]) }}
 	
 	{{ frappe.get_list("Customer", filters=[["Customer", "disabled", "=", 0]], limit=0, distinct=True, fields=["name"]) | length }}
 	<section id="service">
@@ -166,6 +168,15 @@
 			
 		</div>
 	</section>
+
+	<h1>Project Portfolio</h1>
+	<ul>
+		{#% for project in data.project_portfolio %#}
+		{#% endfor %#}
+	</ul>
+	<!-- Add more HTML and template tags as needed for other doctypes -->
+	
+
 	<!-- end about -->
 	<!-- start portfolio -->
 	<section id="portfolio">
