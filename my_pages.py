@@ -23,3 +23,19 @@ def get_doctype_fields(doctype):
     return fields
 
 
+@frappe.whitelist()
+def list_fields(doctype):
+    meta = frappe.get_meta(doctype)
+    fields = [field.fieldname for field in meta.fields]
+
+    return fields
+
+
+from jinja2 import Environment
+
+def extend_jinja_environment(env: Environment):
+    env.globals.update(list_fields=list_fields)
+
+
+
+

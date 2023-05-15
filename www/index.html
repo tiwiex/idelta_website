@@ -73,15 +73,10 @@
 
 	{{ frappe.get_all("Project Portfolio", fields=["name", "project_description"]) }}
 	{{ frappe.get_list("Customer", filters=[["Customer", "disabled", "=", 0]], limit=0, distinct=True, fields=["name"]) | length }}
-	{% from "my_pages.py" import get_doctype_fields %}
-
 	{% set doctype = "Customer" %}
-	{% set fields = get_doctype_fields(doctype) %}
+	{% set fields = list_fields(doctype) %}
+	{{ fields }}
 	
-	<ul>
-	{% for field in fields %}
-	  <li>{{ field }}</li>
-	{% endfor %}
 	</ul>
 	
 	</ul>
