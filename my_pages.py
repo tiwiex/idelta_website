@@ -17,3 +17,9 @@ def my_pages():
     return render_template("index.html", context)
 
 
+def get_doctype_fields(doctype):
+    meta = frappe.get_meta(doctype)
+    fields = [field.fieldname for field in meta.fields]
+    return fields
+
+
