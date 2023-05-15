@@ -31,10 +31,6 @@ def list_fields(doctype):
     return fields
 
 
-from jinja2 import Environment
-
-def extend_jinja_environment(env: Environment):
-    env.globals.update(list_fields=list_fields)
 
 
 
