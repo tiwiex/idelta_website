@@ -73,9 +73,16 @@
 
 	{{ frappe.get_all("Project Portfolio", fields=["name", "project_description"]) }}
 	{{ frappe.get_list("Customer", filters=[["Customer", "disabled", "=", 0]], limit=0, distinct=True, fields=["name"]) | length }}
-	{{ meta =frappe.get_meta("Customer")}}
-	{{ fields = [field.fieldname for field in meta.fields] }}
-	{{ fields }}
+	{% set doctype = "Customer" %}
+	{% set fields = frappe.get_meta(doctype).fields %}
+	{% set fieldnames = [field.fieldname for field in fields] %}
+	
+	<ul>
+	{% for fieldname in fieldnames %}
+	  <li>{{ fieldname }}</li>
+	{% endfor %}
+	</ul>
+	
 
 Taiwoo
 		{% for project in project_portfolio %}
