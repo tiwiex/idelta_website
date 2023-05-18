@@ -136,10 +136,7 @@ website_context = {
   "site_config_context_variable": "This is foo.bar!"
 }
 
-from my_extension import extend_jinja_environment
 
-def extend_website_settings(context):
-    extend_jinja_environment(context.env)
 
 website_routes = get_website_routes()
 
