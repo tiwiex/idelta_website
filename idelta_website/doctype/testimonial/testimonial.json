@@ -1,0 +1,67 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:name_of_client",
+ "creation": "2023-05-18 23:23:00.005846",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "name_of_client",
+  "organisation",
+  "picture_of_client",
+  "testimonial_statement"
+ ],
+ "fields": [
+  {
+   "fieldname": "name_of_client",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name of Client",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "picture_of_client",
+   "fieldtype": "Attach Image",
+   "label": "Picture of Client",
+   "reqd": 1
+  },
+  {
+   "fieldname": "testimonial_statement",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "Testimonial Statement",
+   "reqd": 1
+  },
+  {
+   "fieldname": "organisation",
+   "fieldtype": "Data",
+   "label": "Organisation",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-05-18 23:53:27.494449",
+ "modified_by": "Administrator",
+ "module": "Idelta Website",
+ "name": "Testimonial",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
